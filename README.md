@@ -3,11 +3,20 @@
 
 # Question 1 (Naked Twins)
 Q: How do we use constraint propagation to solve the naked twins problem?  
-A: *Student should provide answer here*
+A: I used the property of Naked Twins boxes to reduce the set of possible digits 
+of other boxes in the same unit (as these boxes have Sudoku's constraints). 
+After each round of Nake Twins Elimination, I can see that constraints for other
+parts of the unit appear, so my search space is reduced gradually (the constraints are propagated to other region) 
+(Constrain Propagation is about using local constraints in a space to reduce the search space. 
+As we enforce each constraint, we see how it introduces new constraints for other parts of the board
+that can help us further reduce the number of possibilities.)
 
 # Question 2 (Diagonal Sudoku)
 Q: How do we use constraint propagation to solve the diagonal sudoku problem?  
-A: *Student should provide answer here*
+A: I added 2 new units which are 2 diagonal units to unitlist . 
+These units introduce new constraints when the algorithm does the elimination.
+(some boxes have more peers than others). Round after round runing 
+the algorithm, the constraints will be propagated to new region (other boxes).
 
 ### Install
 
